@@ -27,7 +27,7 @@
       testAPI();
     } else {
       // The person is not logged into your app or we are unable to tell.
-      document.getElementById('landing').innerHTML = 'Please log ' +
+      document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
     }
   }
@@ -82,7 +82,7 @@
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      document.getElementById('landing').innerHTML =
+      document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
   }
@@ -109,6 +109,9 @@
 		-->
 		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 		</fb:login-button>
+		
+		<div id="status">		
+		</div>
 		
 	</div>
 	<section>
