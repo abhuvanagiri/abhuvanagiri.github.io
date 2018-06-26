@@ -87,11 +87,7 @@
     });
   }
 </script>	
-<!--
-  Below we include the Login Button social plugin. This button uses
-  the JavaScript SDK to present a graphical Login button that triggers
-  the FB.login() function when clicked.
--->
+
 
 
 	
@@ -106,10 +102,15 @@
 			<p> <a href="www.linkedin.com/in/aditya-bhuv" target="_blank" > My Linkedin Profile </a> </p>
 			
 		</div>
+		<!--
+		  Below we include the Login Button social plugin. This button uses
+		  the JavaScript SDK to present a graphical Login button that triggers
+		  the FB.login() function when clicked.
+		-->
+		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+		</fb:login-button>		
 		
 	</div>
-	<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-	</fb:login-button>		
 	<section>
 		<h2> Skills </h2>
 		<p class="lead"> IOT Architect </p>
