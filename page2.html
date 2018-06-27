@@ -64,7 +64,7 @@
 		
 	
 	function redirect() {
-		FB.logout(function(response) {
+		FB.logout(function() {
 			document.location.reload();
    			window.open ('index.html','_self',false);
 		});	
