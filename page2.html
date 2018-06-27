@@ -11,9 +11,12 @@
 <script>
 	
 	function redirect() {
-		
-		window.open ('index.html','_self',false);
+		FB.logout(function(response) {
+   			window.open ('index.html','_self',false);
+		});	
 	}
+	
+	
 </script>
 
 	<section>
