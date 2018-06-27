@@ -46,6 +46,7 @@
 		
 	
     	FB.getLoginStatus(function(response) {
+		document.getElementById("status").innerHTML = checkLoginState();
       		welcome(response);
     	});
 	
@@ -104,7 +105,7 @@
 		<p> 4 years at STMicroelectronics India </p>
 	</section>
 
-	document.getElementById("status").innerHTML = checkLoginState();
+	
 
 	<button name="redirect" onClick="redirect()">Logout</button>
 	
