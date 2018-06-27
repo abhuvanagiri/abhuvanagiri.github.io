@@ -22,8 +22,8 @@
 			skill();
 		} else {
 		// The person is not logged into your app or we are unable to tell.
-			document.getElementById('status').innerHTML = 'Please log ' +
-			'in to look at skills of Aditya.';
+			document.getElementById('status').innerHTML = 'Moving to Index page to login';
+			setTimeout(illegalLogin, 3000);	
 		}
 	}
 	// This function is called when someone finishes with the Login
@@ -68,6 +68,10 @@
 			document.location.reload();
    			window.open ('index.html','_self',false);
 		});	
+	}
+	
+	function illegalLogin() {
+		window.open ('index.html','_self',false);
 	}
 	
 	function welcome() {
